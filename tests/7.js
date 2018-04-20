@@ -1,9 +1,12 @@
 const assert = require("assert");
 
-const exercise = require("../exercises/0");
+const exercise = require("../exercises/7");
 
-describe("Sanity check", () => {
-    it("prints 'Hello World'", () => {
-        assert.equal(exercise(), "Hello world!");
-    });
+describe("Exercise 7", () => {
+  it("returns 'Dan'", done => {
+    exercise().then(result => {
+      assert.equal(result, "Dan");
+      done();
+    }).catch(done);
+  });
 });
